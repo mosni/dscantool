@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports: ["127.0.0.1:33017:8000"]
+    env_file: .env
+    networks: [stack]
+networks:
+  stack:
+    external: true

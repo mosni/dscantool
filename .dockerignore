@@ -2,11 +2,11 @@ __pycache__/
 *.pyc
 *.pyo
 .env
-db.sqlite3
 venv/
 env/
 dscanenv/
 staticfiles/
 logs/
 *.log
-eve_data/*.yaml
+.git/
+.gitignore
