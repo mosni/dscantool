@@ -13,11 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
-from django.conf.urls import include, url
+from django.urls import include, re_path
 
 urlpatterns = [
-    url(r'^', include('dscan.urls', namespace='dscan')),
+    re_path(r'^', include('dscan.urls', namespace='dscan')),
 ]
 
 handler400 = 'dscan.views.error400'

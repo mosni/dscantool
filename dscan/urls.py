@@ -1,11 +1,11 @@
-from django.conf.urls import include, url
+from django.urls import re_path
 from dscan import views
 
 app_name = 'dscan'
 
 urlpatterns = [
-    url(r'^$', views.landing, name="landing"),
-    url(r'^parse', views.parse, name="parse"),
-    url(r'^about', views.about, name="about"),
-    url(r'^(?P<token>.*)$', views.show, name="show")
+    re_path(r'^$', views.landing, name="landing"),
+    re_path(r'^parse', views.parse, name="parse"),
+    re_path(r'^about', views.about, name="about"),
+    re_path(r'^(?P<token>.*)$', views.show, name="show")
 ]
