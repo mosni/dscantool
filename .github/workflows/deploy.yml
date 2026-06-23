@@ -1,14 +1,10 @@
 name: deploy
-# On a `deploy-*` version tag (e.g. deploy-v1.2.0), deploy this app at that ref via the shared
-# pipeline in mosni/infrastructure. The DEPLOY_SSH_KEY is a mosni org secret (secrets: inherit).
 on:
-  push:
-    tags: ['deploy-*']
+  push: { tags: ['deploy-*'] }
   workflow_dispatch: {}
+permissions:
+  id-token: write
+  contents: read
 jobs:
   deploy:
     uses: mosni/infrastructure/.github/workflows/deploy.yml@main
-    with:
-      app: dscan
-      ref: ${{ github.ref_type == 'tag' && github.ref_name || '' }}
-    secrets: inherit
