@@ -10,3 +10,4 @@ staticfiles/
 logs/
 *.log
 eve_data/*.yaml
+stats/

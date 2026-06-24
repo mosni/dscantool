@@ -4,6 +4,8 @@ services:
     restart: unless-stopped
     ports: ["127.0.0.1:33017:8000"]
     env_file: .env
+    volumes:
+      - ./stats:/app/stats
     networks: [stack]
 networks:
   stack:
