@@ -1,7 +1,12 @@
 name: deploy
 on:
-  push: { tags: ['deploy-*'] }
+  push:
+    branches: [master]
+    tags: ['deploy-*']
   workflow_dispatch: {}
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: false
 permissions:
   id-token: write
   contents: read
