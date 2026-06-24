@@ -23,7 +23,7 @@ class Command(BaseCommand):
         newGroups = []
         try:
             file = open("eve_data/groupIDs.yaml", encoding="utf-8")
-            groups = yaml.load(file)
+            groups = yaml.safe_load(file)
 
             for g in groups:
                 print(g, end="\r")
@@ -41,7 +41,7 @@ class Command(BaseCommand):
         newTypes = []
         try:
             file = open("eve_data/typeIDs.yaml", encoding="utf-8")
-            types = yaml.load(file)
+            types = yaml.safe_load(file)
 
             for g in types:
                 print(g, end="\r")

@@ -31,6 +31,9 @@ ALLOWED_HOSTS = [h.strip() for h in _allowed.split(',') if h.strip()]
 
 # Application definition
 
+# Django 3.2+ default primary key type; set explicitly to own the choice.
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

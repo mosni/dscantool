@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.11-slim
 
 # Build deps for mysqlclient
 RUN apt-get update && apt-get install -y \
