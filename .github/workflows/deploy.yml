@@ -1,0 +1,10 @@
+name: deploy
+on:
+  push: { tags: ['deploy-*'] }
+  workflow_dispatch: {}
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  deploy:
+    uses: mosni/github-workflows/.github/workflows/deploy.yml@main
