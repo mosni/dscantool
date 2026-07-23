@@ -27,7 +27,9 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 _allowed = os.environ.get('ALLOWED_HOSTS', 'dscan.nimos.ws')
 ALLOWED_HOSTS = [h.strip() for h in _allowed.split(',') if h.strip()]
+CSRF_TRUSTED_ORIGINS = [f"https://{h.strip()}" for h in _allowed.split(',') if h.strip()]
 
+print("Loaded origins", CSRF_TRUSTED_ORIGINS)
 
 # Application definition
 
