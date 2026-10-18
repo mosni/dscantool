@@ -6,6 +6,6 @@
 # Minimum required env vars:
 #   SECRET_KEY, DB_PASSWORD
 # Optional (have defaults):
-#   DEBUG (default False), ALLOWED_HOSTS (default dscan.nimos.ws),
+#   DEBUG (default False), ALLOWED_HOSTS (default dscan.mosni.dev),
 #   DB_NAME (default dscantool), DB_USER (default dscantool),
 #   DB_HOST (default mariadb), DB_PORT (default 3306)

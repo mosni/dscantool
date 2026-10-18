@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-_allowed = os.environ.get('ALLOWED_HOSTS', 'dscan.nimos.ws')
+_allowed = os.environ.get('ALLOWED_HOSTS', 'dscan.mosni.dev')
 ALLOWED_HOSTS = [h.strip() for h in _allowed.split(',') if h.strip()]
 CSRF_TRUSTED_ORIGINS = [f"https://{h.strip()}" for h in _allowed.split(',') if h.strip()]
 

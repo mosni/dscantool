@@ -1,6 +1,6 @@
-# Nimos' Intel Tool
+# Hannah's Intel Tool
 
-Nimos' Intel Tool is a web application that parses DScans and local scans from the game Eve Online.  
+Hannah's Intel Tool is a web application that parses DScans and local scans from the game Eve Online.  
 I made it because my previous favorite Intel Tool dscan.me shut down and I wanted another one with a dark theme.
 
 
@@ -11,7 +11,7 @@ I made it because my previous favorite Intel Tool dscan.me shut down and I wante
 4. Install database with `python3 manage.py migrate` 
 
 ## Optional: Import Type information from SDE
-Note: Nimos' Intel Tool pulls all missing type information from ESI when needed. When starting out with an empty cache that can make the first scans take a couple of seconds to parse, but once a ship type is cached it won't be requested again. You can import all ship type information from SDE to "seed" the cache, but doing so is optional and the script is no longer maintained. Use at your own discretion or feel free to import the SDE another way.
+Note: Hannah's Intel Tool pulls all missing type information from ESI when needed. When starting out with an empty cache that can make the first scans take a couple of seconds to parse, but once a ship type is cached it won't be requested again. You can import all ship type information from SDE to "seed" the cache, but doing so is optional and the script is no longer maintained. Use at your own discretion or feel free to import the SDE another way.
 
 1. Get the EVE Static Data Export (SDE) from https://developers.eveonline.com/resource/resources
 2. Extract `groupIDs.yaml` and `typeIDs.yaml` from the SDE into eve_data
