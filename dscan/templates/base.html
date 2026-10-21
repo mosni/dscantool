@@ -22,6 +22,13 @@
         {% endblock meta %}
     </head>
     <body>
+        {% if show_promo %}
+            <div class="container promo-banner-wrap">
+                <div class="promo-banner">
+                    Try <a href="https://moddle.space" target="_blank" rel="noopener">Moddle</a>, my new daily Eve ship guessing game!
+                </div>
+            </div>
+        {% endif %}
         {% block content %}
         {% endblock content %}
 
